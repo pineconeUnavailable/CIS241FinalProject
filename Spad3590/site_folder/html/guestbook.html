@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Page Title -->
+    <title>Guest Book - Christen Spadavecchia</title>
+    <!--        Page Metadata       -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Christen Spadavecchia">
+    <meta name="keywords" content="EDCC, Edmonds, College, Christen, Spadavecchia, Web Developer">
+    <meta name="description" content="Christen Spadavecchia Web Development Exit Portfolio">
+    <meta name="robots" content="none">
+    <!-- Set Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Content Security Policy: Note: May Block Some CDNs -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'unsafe-inline' 'self'; img-src 'self'; child-src 'self'; script-src 'unsafe-inline' 'self';">
+    
+    <!-- Stylesheet link -->
+    <link rel="stylesheet" href="../css/myStyle.css" type="text/css">
+
+
+    <style>
+        .inline {
+            display: inline-block;
+        }
+
+        .small {
+            font-weight: lighter;
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="bg" style="z-index: -1; position:fixed; margin:0; padding: 0; width: 100%; height: 100%;">
+        Your browser does not support the canvas element.
+    </canvas>
+
+    <hr>
+    <nav class="container">
+        <a class="nav_title nav_link mono" href="../html/home.html">Christen Spadavecchia</a>
+        <a class="nav_link mono" href="../html/interests.html">Interests</a>
+        <a class="nav_link mono" href="../html/reflections.html">Reflections</a>
+        <a class="nav_link mono" href="../html/resume.html">Resume</a>
+        <a class="nav_link mono" href="../html/guestbook.html">Guest Book</a>
+    </nav>
+    <hr>
+
+    <h1 id="title" class="mono">Guest Book</h1>
+
+    <div id="content">
+        <h2 class="mono label">Get In Touch!</h2>
+        <form method="get" action="mailto:cspada32@gmail.com" class="mono">
+
+            First Name:&nbsp; <input type="text" name="firstName" class="dynamic-txt" size="20" />
+            <br>
+            <br>
+
+            Last Name:&nbsp;&nbsp; <input type="text" class="dynamic-txt" name="lastName" size="20" />
+            <br>
+            <br>
+
+            Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="dynamic-txt" name="email" size="20" />
+            <br>
+            <br>
+
+            Your Domain: <input type="text" name="site" size="20" class="dynamic-txt" value="http://" />
+            <div class="inline small">(if you have one)</div>
+            <br>
+            <br>
+            <hr>
+
+            Purpose for Writing:<br>
+            <div>
+                <input type="radio" name="purpose" value="question" />Ask a Question<br>
+                <input type="radio" name="purpose" value="comment" />Leave a Comment<br>
+                <input type="radio" name="purpose" value="bug" />Report a Bug<br>
+                <input type="radio" name="purpose" value="inquiry" />Make an Inquiry<br>
+                <input type="radio" name="purpose" value="other" />Other
+            </div>
+            <br>
+
+            How did you find my site?<br>
+            <select name="referrer">
+                <option>...</option>
+                <option>Word of Mouth</option>
+                <option>Sent by a Friend</option>
+                <option>Search Engine</option>
+                <option>Other</option>
+            </select>
+            <br>
+            <br>
+            <hr>
+
+            Comments: <br>
+            <textarea name="comments" cols="30" rows="3" placeholder="Enter Your Comments Here"></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Submit" style="font-weight: bold;">
+            <input type="reset" value="Clear" />
+            <br>
+            <br>
+        </form>
+    </div>
+    <script src="../js/global.js"></script>
+    <script src="../js/bg.js"></script>
+
+    <!-- BG Tweaks -->
+    <script>
+        BG_FILL = "black";
+        BG_STROKE = 'pink';
+    </script>
+   
+   
+   <script>
+       function setSize(elem, baseLength){
+           let preValue = "http://";
+           
+           if(elem.value == preValue || elem.value == ""){
+                elem.size = elem.value.length + baseLength - elem.value.length;
+           } else {
+                baseLength = 0
+                elem.size = elem.value.length + baseLength;
+           }
+        }
+
+       let elems = Array.from(document.getElementsByClassName("dynamic-txt"));
+       
+       elems.forEach(elem => {
+            let baseLength = elem.size;
+            elem.size = baseLength
+            elem.addEventListener("input", () => setSize(elem, baseLength));
+       });
+       
+   </script>
+</body>
+
+</html>

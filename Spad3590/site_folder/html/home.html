@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Page Title -->
+    <title>Home Page - Christen Spadavecchia</title>
+
+    <!--        Page Metadata       -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Christen Spadavecchia">
+    <meta name="keywords" content="EDCC, Edmonds, College, Christen, Spadavecchia, Web Developer">
+    <meta name="description" content="Christen Spadavecchia Web Development Exit Portfolio">
+    <meta name="robots" content="none">
+
+    <!-- Set Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Content Security Policy: Note: May Block Some CDNs -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'unsafe-inline' 'self'; img-src 'self'; child-src 'self'; script-src 'unsafe-inline' 'self';">
+    
+    <!-- Stylesheet link -->
+    <link rel="stylesheet" href="../css/myStyle.css" type="text/css">
+    
+    <style>
+        .humblebrag {
+            color: darkgray;
+            font-size: 10px;
+            vertical-align: middle;
+        }
+
+        .plsnohack {
+            color: darkgray;
+            font-size: smaller;
+        }
+
+        img.pushed-right {
+            float: left;
+            padding-bottom: 500px;
+        }
+
+        .nudged-left {
+            margin-left: 12%;
+        }
+
+        img.normal_size {
+            max-width: 10%;
+            margin: 10px;
+            margin-right: 20px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            img.normal_size {
+                float:none;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                max-width: 90%;
+                padding-bottom: 0px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="bg" style="z-index: -1; position:fixed; margin:0; padding: 0; width: 100%; height: 100%;">
+        Your browser does not support the canvas element.
+    </canvas>
+
+    <hr>
+    <nav class="container">
+        <a class="nav_title nav_link mono" href="../html/home.html">Christen Spadavecchia</a>
+        <a class="nav_link mono" href="../html/interests.html">Interests</a>
+        <a class="nav_link mono" href="../html/reflections.html">Reflections</a>
+        <a class="nav_link mono" href="../html/resume.html">Resume</a>
+        <a class="nav_link mono" href="../html/guestbook.html">Guest Book</a>
+    </nav>
+    <hr>
+
+    <h1 id="title" class="mono">Home</h1>
+
+    <div id="content" class="container">
+
+        <div style="height: auto;">
+            <img class="pushed-right normal_size" src="../images/chris_image.jpg"
+                alt="Christen Spadavecchia looking casual." />
+            <br>
+            <h2 class="mono label">About Me</h2>
+
+            <p style="font-weight: lighter; font-size: larger; color: white;">Hi! I'm Christen Spadavecchia</p>
+            <p class="mono">
+                I am a developer with my hands in many pies so to speak. <br>
+                I have written useful programs in Go, Java, and C. <br>
+                I have a foundation in Rust, C++, HTML5, CSS3, and JS. <br>
+                I use linux <i class="humblebrag">(arch btw)</i> as my daily driver desktop OS and I adminster a couple
+                of servers.
+                <i class="plsnohack">(don't get any ideas, they are either updated or airgapped, and thats not a
+                    challenge)</i>
+            </p>
+
+            <p class="mono">
+                I'll come clean. <br>
+                I just genuinely enjoy messing around with computers. <br>
+                My fascination with how they worked started with setting custom JVM arguments to squeeze 2 more fps out
+                of Minecraft on a slow laptop. <br>
+                Ever since I've been continuously diving deeper into the fractally complex world of computing and
+                honestly, I like it here.
+            </p>
+
+            <hr>
+
+            <h2 class="mono label">Projects</h2>
+            <p class="mono">
+                I have created many personal projects in my time as a developer. The most noteworthy of these projects is FileMango. <br>
+                Filemango is "An extensible framework for continuously creating and updating file metadata summaries using configurable external programs" (Spadavecchia, Easton) built for Linux.
+                At a high level it watches the file system and when a file that matches the specified filters is updated, it dispatches an external program that implements a simple protocol that will add the returned tag(s) to the file at the FS level.
+                A toy use case for this would be to automatically keep metadata tags for files in a user's pictures directory up to date with the average color of the picture. 
+
+            </p>
+
+            <h2 class="mono label">Quick Links</h2>
+            <ul class="mono">
+                <li><a href="https://github.com/Johnnydouble/FileMango" target="_blank" class="link">Filemango Project</a></li>
+                <li><a href="https://github.com/Johnnydouble" target="_blank" class="link">Github Link</a></li>
+                <li><a href="../html/guestbook.html" target="_blank" class="link">Guest Book</a></li>
+            </ul>
+
+        </div>
+
+
+
+    </div>
+    <script src="../js/global.js"></script>
+    <script src="../js/bg.js"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Page Title -->
+    <title>Interests - Christen Spadavecchia</title>
+    <!--        Page Metadata       -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Christen Spadavecchia">
+    <meta name="keywords" content="EDCC, Edmonds, College, Christen, Spadavecchia, Web Developer">
+    <meta name="description" content="Christen Spadavecchia Web Development Exit Portfolio">
+    <meta name="robots" content="none">
+    <!-- Set Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Content Security Policy: Note: May Block Some CDNs -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'unsafe-inline' 'self'; img-src *; child-src 'self'; script-src 'unsafe-inline' 'self';">
+    <!-- Stylesheet link -->
+    <link rel="stylesheet" href="../css/myStyle.css" type="text/css">
+
+    <style>
+        .sub-label {
+            font-weight: bold;
+            font-size: larger;
+            color: white;
+        }
+
+        .plsnohack {
+            color: darkgray;
+            font-size: smaller;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="bg" style="z-index: -1; position:fixed; margin:0; padding: 0; width: 100%; height: 100%;">
+        Your browser does not support the canvas element.
+    </canvas>
+    <script src="../js/bg.js"></script>
+
+    <!-- BG Tweaks -->
+    <script>
+        BG_FILL = "rgba(20, 20, 20, .5)";
+        BG_STROKE = 'darkgreen';
+    </script>
+
+    <hr>
+    <nav class="container">
+        <a class="nav_title nav_link mono" href="../html/home.html">Christen Spadavecchia</a>
+        <a class="nav_link mono" href="../html/interests.html">Interests</a>
+        <a class="nav_link mono" href="../html/reflections.html">Reflections</a>
+        <a class="nav_link mono" href="../html/resume.html">Resume</a>
+        <a class="nav_link mono" href="../html/guestbook.html">Guest Book</a>
+    </nav>
+    <hr>
+
+    <h1 id="title" class="mono">Interests</h1>
+
+    <div id="content" class="mono">
+        <h2 class="mono label">Linux</h2>
+        <p>
+            For most of my life I was a Windows user and I accepted its faults. Then I had my system break twice within
+            a 3 month period.<br>
+            After having that experience, I was ready for a change.<br><br><br>
+        </p>
+        <p>
+            I was originally drawn to Linux because somebody I went to class with at the time used it on an ancient
+            laptop and it managed to run fairly smoothly despite its age.<br>
+            When I tried it though, what ended up hooking me was the package manager.<br>
+            I had never considered it a weird process but it feels so natural now to install programs with the command
+            line.<br>
+            It isn't much of an issue when installing front end programs that have nice websites and good installers but
+            <em>it is a life saver when doing development work</em>.<br>
+            <strong>Case and point: <a href="https://docs.flutter.dev/get-started/install/windows" target="_blank"
+                    class="link">Installing Flutter Toolkit</a></strong><br><br>
+        </p>
+
+        <h3 class="sub-label">Software I use*:</h3>
+        <ul>
+            <li><a href="https://github.com/Jguer/yay" target="_blank" class="link"
+                    title="Package Manager (Program Installer)">Package Manager</a> <br>
+            </li>
+            <li><a href="https://kde.org/" target="_blank" class="link" title="My &quot;DE&quot; (Desktop UI)">My
+                    Desktop Environment</a> <br>
+            </li>
+            <li><a href="https://swaywm.org/" target="_blank" class="link"
+                    title="My Future &quot;DE&quot; (Desktop UI)">My Future Desktop Environment</a> <br>
+            </li>
+        </ul><br><br>
+
+        <h2 class="mono label">Personal Projects</h2>
+        <h3 class="sub-label">Raspberry Pi Home Assistant</h3>
+        <p>
+            I used a Raspberry Pi to create a custom bluetooth speaker, morning alarm, and smart assistant all in one.
+
+            I did the bluetooth speaker part with <a href="https://www.freedesktop.org/wiki/Software/PulseAudio/"
+                target="_blank" class="link">PulseAudio</a> using <a
+                href="https://www.instructables.com/Turn-your-Raspberry-Pi-into-a-Portable-Bluetooth-A/" target="_blank"
+                class="link">this guide</a> and <a href="https://forums.raspberrypi.com/viewtopic.php?t=235519"
+                target="_blank" class="link">this guide</a>. <br>
+            The smart assistant part with <a href="https://mycroft.ai/" target="_blank" class="link">Mycroft</a>. <br>
+            And the alarm using cron and a custom bash script.
+        </p>
+        <br>
+
+        <h3 class="sub-label">File Server</h3>
+        <p>
+            I used a couple of hard drives in raid 1 and another raspberry pi to make a little storage server where I do
+            backups less frequently than I should (but not never). <br>
+        <span class="plsnohack">Its airgapped. Don't Try it. (pls).</span>
+        </p>
+        <br><br>
+
+
+        <h2 class="label">Filemango</h2>
+            <p>
+                Filemango is a live modular file analysis and tagging program written in go for Linux systems. <br>
+                Modules can be written in any language and are launched automatically by the main program as specified
+                in the config file. <br>
+                When a file is changed in a subdirectory of the one the program is configured to watch, it will
+                automatically be queued for analysis with the relevant analysis modules as per the config. <br>
+
+                <a href="https://github.com/Johnnydouble/FileMango" target="_blank" class="link"
+                    style="font-size: larger;">Filemango Project</a>
+
+            </p>
+
+    </div>
+    <script src="../js/global.js"></script>
+</body>
+
+</html>
